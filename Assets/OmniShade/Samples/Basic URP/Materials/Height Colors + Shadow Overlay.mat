@@ -2,19 +2,44 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Height Colors + Shadow Overlay
   m_Shader: {fileID: 4800000, guid: a2a06e22c08354d9699356710b69ca9c, type: 3}
-  m_ShaderKeywords: AMBIENT ANIME_SOFT DIFFUSE DIFFUSE_ADD FOG HEIGHT_COLORS MATCAP_PERSPECTIVE
-    OUTLINE_PASS_DISABLED SHADOWS_ENABLED SHADOW_OVERLAY SPECULAR _DETAILBLEND_ALPHA_BLEND
-    _DETAILUV_UV1 _HEIGHTCOLORSBLEND_ALPHA_BLEND _LAYER1BLEND_ALPHA_BLEND _LAYER2BLEND_ALPHA_BLEND
-    _LAYER3BLEND_ALPHA_BLEND _LIGHTMAPUV_UV1 _MATCAPBLEND_MULTIPLY _NORMALUV_UV1
-    _OPTFALLBACK_ALL _OPTFOG_ALL _OPTLIGHTMAPPING_ALL _OPTPOINTLIGHTS_ALL _OPTSHADOW_ALL
-    _PLANTTYPE_PLANT _RIMBLEND_ADDITIVE _SHADOWOVERLAYANIMATION_SCROLL _SPECULARUV_UV1
+  m_ValidKeywords:
+  - AMBIENT
+  - ANIME_SOFT
+  - DIFFUSE
+  - FOG
+  - HEIGHT_COLORS
+  - MATCAP_PERSPECTIVE
+  - OUTLINE_PASS_DISABLED
+  - SHADOWS_ENABLED
+  - SHADOW_OVERLAY
+  - SPECULAR
+  - _DETAILBLEND_ALPHA_BLEND
+  - _DETAILUV_UV1
+  - _HEIGHTCOLORSBLEND_ALPHA_BLEND
+  - _LAYER1BLEND_ALPHA_BLEND
+  - _LAYER2BLEND_ALPHA_BLEND
+  - _LAYER3BLEND_ALPHA_BLEND
+  - _LIGHTMAPUV_UV1
+  - _MATCAPBLEND_MULTIPLY
+  - _NORMALUV_UV1
+  - _PLANTTYPE_PLANT
+  - _RIMBLEND_ADDITIVE
+  - _SHADOWOVERLAYANIMATION_SWAY
+  - _SPECULARUV_UV1
+  m_InvalidKeywords:
+  - DIFFUSE_ADD
+  - _OPTFALLBACK_ALL
+  - _OPTFOG_ALL
+  - _OPTLIGHTMAPPING_ALL
+  - _OPTPOINTLIGHTS_ALL
+  - _OPTSHADOW_ALL
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -117,6 +142,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _Ambient: 1
     - _AmbientBrightness: 1
@@ -157,10 +183,10 @@ Material:
     - _HeightColors: 1
     - _HeightColorsAlpha: 1
     - _HeightColorsBlend: 0
-    - _HeightColorsEdgeThickness: 1.25
-    - _HeightColorsHeight: -0.5
+    - _HeightColorsEdgeThickness: 7.4
+    - _HeightColorsHeight: -9
     - _HeightColorsSpace: 0
-    - _HeightColorsThickness: 0
+    - _HeightColorsThickness: 6
     - _IgnoreMainTexAlpha: 0
     - _Layer1Alpha: 1
     - _Layer1Blend: 0
@@ -202,15 +228,19 @@ Material:
     - _PlantSwaySpeed: 1
     - _PlantType: 0
     - _Preset: 0
+    - _Reflection: 0
+    - _ReflectionAmount: 1
     - _ReflectionBrightness: 1
+    - _ReflectionRim: 0
     - _Rim: 0
     - _RimAmount: 1
     - _RimBlend: 1
     - _RimContrast: 5
     - _RimInverse: 0
+    - _Saturation: 1
     - _ShadowDarkness: 0.5
-    - _ShadowOverlayAnimation: 0
-    - _ShadowOverlayBrightness: 1
+    - _ShadowOverlayAnimation: 1
+    - _ShadowOverlayBrightness: 1.59
     - _ShadowOverlaySpeedU: 0.1
     - _ShadowOverlaySpeedV: 0.03
     - _ShadowOverlaySwayAmount: 0.01
@@ -228,6 +258,7 @@ Material:
     - _TransparencyMaskContrast: 1
     - _UVSec: 0
     - _VertexColors: 0
+    - _VertexColorsAmount: 1
     - _VertexColorsContrast: 1
     - _VertexExtrude: 0
     - _ZOffset: 0
@@ -241,7 +272,7 @@ Material:
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 0, b: 0, a: 1}
     - _Emissive: {r: 0, g: 0, b: 0, a: 0}
-    - _HeightColorsColor: {r: 0, g: 0.01560823, b: 0.745283, a: 1}
+    - _HeightColorsColor: {r: 1, g: 0.594161, b: 0, a: 1}
     - _Layer1Color: {r: 1, g: 1, b: 1, a: 1}
     - _Layer2Color: {r: 1, g: 1, b: 1, a: 1}
     - _Layer3Color: {r: 1, g: 1, b: 1, a: 1}
@@ -249,7 +280,9 @@ Material:
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _MatCapRot: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimDirection: {r: 0, g: 0, b: 0, a: 0}
     - _ShadowColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

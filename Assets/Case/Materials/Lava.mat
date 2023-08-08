@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lava
-  m_Shader: {fileID: -6465566751694194690, guid: 68b3807e1b7f4eb418cedfff739b3fef,
+  m_Shader: {fileID: -6465566751694194690, guid: 0f30e9c139ba98344a6bfaa6738d49d5,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -54,7 +54,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Flow_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HeightColorsTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Lava_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -102,6 +110,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Rock_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_44bf2c8bcd604e27870378d2c7d24b6c_Texture_1:
+        m_Texture: {fileID: 2800000, guid: bb2648d6ce88e4ebda83820383435a7d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowOverlayTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -134,6 +150,8 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AmbientBrightness: 1
+    - _Angle_Change_Speed: 1
+    - _Angle_Offset: 2
     - _Anime: 0
     - _AnimeSoftness: 0.01
     - _AnimeThreshold1: 0.45
@@ -164,8 +182,10 @@ Material:
     - _DiffuseWrap: 0
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.99
+    - _Fill: 1
     - _Flat: 0
+    - _Flow_Speed: 0.02
+    - _Flow_Strength: 0.328
     - _Fog: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -177,7 +197,9 @@ Material:
     - _HeightColorsHeight: 0
     - _HeightColorsSpace: 0
     - _HeightColorsThickness: 0
+    - _Heightmap_Strength: 1
     - _IgnoreMainTexAlpha: 0
+    - _Island_Density: 5
     - _Layer1Alpha: 1
     - _Layer1Blend: 0
     - _Layer1Brightness: 1
@@ -240,13 +262,15 @@ Material:
     - _SpecularUV: 0
     - _SrcBlend: 1
     - _Surface: 0
+    - _Thickness: 0.06
+    - _Thickness_Falloff: 0.0754
     - _TransparencyMaskAmount: 1
     - _TransparencyMaskContrast: 1
     - _VertexColors: 0
     - _VertexColorsAmount: 1
     - _VertexColorsContrast: 1
-    - _WobbleX: 0.24
-    - _WobbleZ: -0.03
+    - _WobbleX: 0.18
+    - _WobbleZ: 0.92
     - _WorkflowMode: 1
     - _ZOffset: 0
     - _ZTest: 4
@@ -261,6 +285,8 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive: {r: 0, g: 0, b: 0, a: 0}
     - _HeightColorsColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Lava_Color: {r: 31.999996, g: 0.98937845, b: 0, a: 0}
+    - _Lava_Speed: {r: 0, g: 0, b: 0, a: 0}
     - _Layer1Color: {r: 1, g: 1, b: 1, a: 1}
     - _Layer2Color: {r: 1, g: 1, b: 1, a: 1}
     - _Layer3Color: {r: 1, g: 1, b: 1, a: 1}
@@ -271,11 +297,12 @@ Material:
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimDirection: {r: 0, g: 0, b: 0, a: 0}
+    - _Rock_Color: {r: 0.9137255, g: 0.23757909, b: 0.023529395, a: 1}
     - _ShadowColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    - _SlideColor: {r: 0.57547164, g: 0.31216627, b: 0.31216627, a: 0}
+    - _SlideColor: {r: 1, g: 0.38724625, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TopColor: {r: 0.8773585, g: 0.18623178, b: 0.18623178, a: 0}
+    - _TopColor: {r: 1, g: 0.23113209, b: 0.23113209, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8305028603566291713
 MonoBehaviour:
